@@ -290,6 +290,7 @@ p {
   .presentation-text {
     max-width: 400px;
   }
+
   .education-container {
     display: flex;
     flex-direction: column;
@@ -313,7 +314,7 @@ p {
 
 @media (max-width: 768px) {
   header {
-    margin-top: 0;
+    margin-top: 15px;
     height: 30vh;
   }
   .top {
@@ -322,11 +323,10 @@ p {
   .bottom {
     margin-left: 10%;
   }
-.key-top, .bottom > img {
-  max-height: 50px;
-  margin: 0;
-  padding: 0;
-}
+  .key-top,
+  .bottom > img {
+    max-height: 50px;
+  }
   h1 {
     font-size: 3.1rem;
   }
@@ -334,19 +334,23 @@ p {
     font-size: 1rem;
     margin-top: 10px;
   }
-p, .presentation-text {
-  /* flex: wrap; */
-  font-size: 0.8rem;
-  max-width: 70%;
-  /* min-width: 280px; */
-  margin: 15px;
-}
-.vignette, .down-arrow {
-  max-height: 25px;
-}
-.page-number {
-  font-size: 0.8rem;
-}
+  p,
+  .presentation-text {
+    font-size: 0.8rem;
+    max-width: 70%;
+    margin: 15px;
+  }
+  .image-text-container > p {
+    max-width: 100%;
+  }
+
+  .vignette,
+  .down-arrow {
+    max-height: 25px;
+  }
+  .page-number {
+    font-size: 0.8rem;
+  }
   .presentation-container h2 {
     font-size: 3rem;
   }
@@ -360,17 +364,18 @@ p, .presentation-text {
     font-size: 2.5rem;
   }
 
-.double-arrow, .double-arrow-gold {
-  max-height: 15px;
-}
-.down-arrow {
-  margin-bottom: 1em;
-}
+  .double-arrow,
+  .double-arrow-gold {
+    max-height: 15px;
+  }
+  .down-arrow {
+    margin-bottom: 1em;
+  }
 
-.logo {
-  max-height: 90px;
-}
-.email-link {
-  font-size: 1rem;
-}
+  .logo {
+    max-height: 90px;
+  }
+  .email-link {
+    font-size: 1rem;
+  }
 }
