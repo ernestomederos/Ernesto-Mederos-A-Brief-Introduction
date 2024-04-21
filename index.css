@@ -3,10 +3,7 @@
   src: url("./assets/glacial-indifference/GlacialIndifference-Regular.otf")
     format("opentype");
 }
-/* @font-face {
-  font-family: Safira-March;
-  src: url(./assets/safira_march/Safira\ March.otf) format("opentype");
-} */
+
 @font-face {
   font-family: Borcha;
   src: url(./assets/borcha-regular.otf) format("opentype");
@@ -20,7 +17,7 @@ body {
   overflow-x: hidden;
   background-color: #ffffff;
 }
-
+/* Header and Section 1 */
 header {
   margin-top: 5%;
   display: flex;
@@ -103,7 +100,7 @@ section,
   color: #cc9933;
   font-family: Borcha, sans-serif;
   font-weight: 100;
-  font-size: 6rem;
+  font-size: 5rem;
   margin-bottom: 0;
   opacity: 0.85;
 }
@@ -111,6 +108,8 @@ section,
   display: wrap;
   max-width: 600px;
 }
+
+/* Section 2 - Web Development and Music */
 h3 {
   font-family: Borcha, sans-serif;
   font-weight: 100;
@@ -125,7 +124,7 @@ p {
   letter-spacing: -0.04em;
   opacity: 0.85;
   margin: 30px;
-  max-width: 1200px;
+  max-width: 70%;
 }
 
 .flex-container > .topic {
@@ -182,24 +181,32 @@ p {
   padding: 1em;
 }
 .about-me-section {
-  display: grid;
-  max-width: 60%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 180px 180px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+}
+.about-me-section p {
+  margin: 10px;
 }
 .about-me-text {
-  text-align: justify;
+  text-align: center;
   display: flex;
   justify-content: center;
 }
 .contact-me {
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 }
 #call-to-action {
   color: #cc9933;
 }
 .contact-me-text {
-  max-width: 650px;
+  max-width: 750px;
+  min-width: 270px;
 }
 
 .email-link {
@@ -241,7 +248,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+}
+.footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 @media (max-width: 1700px) {
@@ -266,14 +278,11 @@ p {
   }
   .image-text-container {
     flex-direction: column;
-    max-width: 800px;
+    max-width: 75%;
   }
   .about-me-section .about-me-text {
     max-width: 100%;
     text-align: center;
-  }
-  .display {
-    display: none;
   }
 }
 
@@ -289,13 +298,79 @@ p {
     margin: 0;
   }
   .about-me-section {
-    /* display: wrap; */
     width: 70%;
     margin: 0;
     padding: 0;
   }
   .about-me-text {
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 0 1em 0;
   }
+  .contact-me-text {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-top: 0;
+    height: 30vh;
+  }
+  .top {
+    margin-right: 10%;
+  }
+  .bottom {
+    margin-left: 10%;
+  }
+.key-top, .bottom > img {
+  max-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+  h1 {
+    font-size: 3.1rem;
+  }
+  header > p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+p, .presentation-text {
+  /* flex: wrap; */
+  font-size: 0.8rem;
+  max-width: 70%;
+  /* min-width: 280px; */
+  margin: 15px;
+}
+.vignette, .down-arrow {
+  max-height: 25px;
+}
+.page-number {
+  font-size: 0.8rem;
+}
+  .presentation-container h2 {
+    font-size: 3rem;
+  }
+  .flex-container {
+    gap: 0;
+  }
+  .profile-image {
+    max-height: 170px;
+  }
+  .flex-container > .topic {
+    font-size: 2.5rem;
+  }
+
+.double-arrow, .double-arrow-gold {
+  max-height: 15px;
+}
+.down-arrow {
+  margin-bottom: 1em;
+}
+
+.logo {
+  max-height: 90px;
+}
+.email-link {
+  font-size: 1rem;
+}
 }
